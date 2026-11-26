@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="description" content="Ali Hair Salon — premium men's haircuts, beard styling and grooming on Kot Momin Road, Bhagtanwala, Sargodha.">
+  <title>Ali Hair Salon | Mr. Ali — Professional Hair Artist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    :root {
+      --black:#09090b; --panel:#121215; --panel2:#19191e; --gold:#d5ad55;
+      --gold-light:#f2d58b; --red:#a51d2d; --white:#f7f4ee; --muted:#aaa5a0;
+      --line:rgba(213,173,85,.22); --nav-h:72px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;background:var(--black);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.6;padding-bottom:calc(var(--nav-h) + 18px)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}
+    .eyebrow{color:var(--gold);font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;font-weight:800}
+    .gold{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 21px;border-radius:4px;font-weight:800;letter-spacing:.04em;transition:.25s;border:1px solid var(--gold);cursor:pointer}
+    .btn-gold{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#17130a}
+    .btn-outline{color:var(--gold-light);background:transparent}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px #0008}
+    header{position:absolute;z-index:5;top:0;left:0;width:100%;border-bottom:1px solid #ffffff17}
+    .topbar{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{width:43px;height:43px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:1.45rem;transform:rotate(45deg)}
+    .brand-mark span{transform:rotate(-45deg)}
+    .brand-name{font-family:Georgia,"Times New Roman",serif;font-size:1.05rem;letter-spacing:.13em;font-weight:700}
+    .brand-name small{display:block;font:700 .58rem/1.4 Inter,Arial,sans-serif;letter-spacing:.25em;color:var(--gold)}
+    .header-link{font-size:.8rem;color:var(--gold-light);letter-spacing:.1em;text-transform:uppercase}
+    .hero{min-height:760px;display:flex;align-items:center;position:relative;isolation:isolate;background:#111}
+    .hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(5,5,6,.97) 0%,rgba(5,5,6,.84) 45%,rgba(5,5,6,.25) 100%),url("https://images.unsplash.com/photo- barber?auto=format&fit=crop&w=2000&q=85");background-image:linear-gradient(90deg,rgba(5,5,6,.97) 0%,rgba(5,5,6,.84) 45%,rgba(5,5,6,.25) 100%),url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=2000&q=85");background-size:cover;background-position:center}
+    .hero:after{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--black))}
+    .hero-content{padding-top:115px;max-width:690px}
+    .hero-kicker{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+    .hero-kicker:before{content:"";width:42px;height:1px;background:var(--red)}
+    h1{font:500 clamp(3.2rem,8vw,6.7rem)/.98 Georgia,"Times New Roman",serif;letter-spacing:-.045em;margin:0 0 18px}
+    h1 span{color:var(--gold);display:block}
+    .hero-sub{font-size:1.04rem;color:#d4d0ca;max-width:520px;margin:0 0 30px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-note{margin-top:38px;color:#c4bdb2;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}
+    section{padding:94px 0}
+    .section-head{max-width:650px;margin:0 auto 46px;text-align:center}
+    .section-head h2{font:500 clamp(2.2rem,5vw,3.6rem)/1.1 Georgia,serif;margin:12px 0;color:var(--white)}
+    .section-head p{color:var(--muted);margin:12px 0 0}
+    .services{background:linear-gradient(180deg,#0b0b0d,#111114)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{background:linear-gradient(145deg,#1a1a1e,#101013);border:1px solid var(--line);padding:29px 25px;min-height:210px;position:relative;overflow:hidden}
+    .service-card:after{content:"";position:absolute;width:90px;height:90px;border:1px solid #d5ad5525;right:-36px;bottom:-36px;transform:rotate(45deg)}
+    .service-num{color:var(--red);font:italic 1.1rem Georgia,serif}
+    .service-card h3{font:500 1.45rem Georgia,serif;margin:15px 0 8px}
+    .service-card p{color:var(--muted);font-size:.92rem;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .about-photo{min-height:480px;position:relative;background:#19191b}
+    .about-photo img{width:100%;height:480px;object-fit:cover;filter:saturate(.75)}
+    .about-photo:after{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--gold);pointer-events:none}
+    .about-copy h2{font:500 clamp(2.3rem,5vw,3.6rem)/1.1 Georgia,serif;margin:12px 0 20px}
+    .about-copy p{color:var(--muted)}
+    .signature{font:italic 1.6rem Georgia,serif;color:var(--gold);margin-top:24px}
+    .gallery{background:#111114}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .gallery-item{height:310px;overflow:hidden;background:#222;position:relative}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:saturate(.78)}
+    .gallery-item:hover img{transform:scale(1.06)}
+    .gallery-item span{position:absolute;bottom:0;left:0;right:0;padding:30px 18px 15px;background:linear-gradient(transparent,#000c);font:1.1rem Georgia,serif}
+    .visit{background:linear-gradient(135deg,#171316,#0c0c0e 60%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .visit h2{font:500 clamp(2.2rem,5vw,3.5rem)/1.1 Georgia,serif;margin:12px 0}
+    .address{color:#d0cbc2;font-size:1rem;margin:20px 0}
+    .map-card{min-height:270px;border:1px solid var(--line);background:radial-gradient(circle at 70% 35%,#a51d2d35,transparent 35%),linear-gradient(135deg,#202024,#101012);display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}
+    .map-pin{font-size:2.2rem;color:var(--gold)}
+    .map-card strong{display:block;font:1.5rem Georgia,serif;margin:8px}
+    footer{padding:36px 0 18px;text-align:center}
+    .footer-brand{font:1.6rem Georgia,serif;letter-spacing:.16em;color:var(--gold)}
+    footer p{color:var(--muted);font-size:.82rem}
+    .socials{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:22px 0}
+    .socials a{border:1px solid #ffffff26;padding:9px 15px;border-radius:3px;font-size:.78rem;color:#e9e3d8;transition:.2s}
+    .socials a:hover{border-color:var(--gold);color:var(--gold)}
+    .socials i{font-size:1rem;margin-right:7px;vertical-align:-1px}
+    .bottom-nav{position:fixed;z-index:20;bottom:12px;left:50%;transform:translateX(-50%);width:min(620px,calc(100% - 24px));height:var(--nav-h);background:rgba(19,19,22,.94);backdrop-filter:blur(16px);border:1px solid #d5ad5555;border-radius:13px;display:flex;align-items:center;justify-content:space-around;box-shadow:0 14px 45px #000b;padding:7px}
+    .bottom-nav a{flex:1;text-align:center;color:#bdb7ad;font-size:.68rem;letter-spacing:.03em;padding:8px 3px;border-radius:8px;display:flex;flex-direction:column;align-items:center;gap:3px}
+    .bottom-nav a span{font-size:1.1rem;line-height:1.2}
+    .bottom-nav a i{font-size:1.12rem;line-height:1.2}
+    .bottom-nav a:hover,.bottom-nav a.active{color:var(--gold);background:#d5ad5514}
+    .whatsapp-float{position:fixed;z-index:21;right:20px;bottom:calc(var(--nav-h) + 28px);width:54px;height:54px;border-radius:50%;background:#1fae62;color:#fff;display:grid;place-items:center;font-size:1.65rem;box-shadow:0 8px 25px #0009;border:2px solid #ffffff55}
+    .whatsapp-float i{font-size:1.8rem}
+    .whatsapp-float:hover{transform:translateY(-3px)}
+    .disclaimer{font-size:.72rem;color:#807a72;margin-top:18px}
+    @media(max-width:760px){
+      .container{width:min(100% - 30px,560px)}
+      .topbar{height:72px}.header-link{font-size:.68rem}
+      .hero{min-height:700px}.hero:before{background-image:linear-gradient(90deg,rgba(5,5,6,.94),rgba(5,5,6,.68)),url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80");background-position:58% center}
+      .hero-content{padding-top:100px}
+      section{padding:72px 0}
+      .service-grid{grid-template-columns:1fr 1fr;gap:12px}
+      .service-card{padding:22px 17px;min-height:190px}
+      .about-grid,.visit-grid{grid-template-columns:1fr;gap:34px}
+      .about-photo{min-height:340px;margin-right:12px}.about-photo img{height:340px}
+      .gallery-grid{grid-template-columns:1fr 1fr;gap:10px}
+      .gallery-item{height:220px}
+      .gallery-item:last-child{display:none}
+      .section-head{margin-bottom:32px}
+    }
+    @media(max-width:390px){
+      .brand-name{font-size:.9rem}.brand-mark{width:36px;height:36px}
+      .service-grid{grid-template-columns:1fr}
+      .hero-actions .btn{width:100%}
+      .bottom-nav a{font-size:.61rem}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <a class="brand" href="#home" aria-label="Ali Hair Salon home">
+        <div class="brand-mark"><span>A</span></div>
+        <div class="brand-name">ALI HAIR SALON<small>MR. ALI · HAIR CUT</small></div>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-kicker eyebrow">Premium Grooming Experience</div>
+          <h1>YOUR STYLE.<span>YOUR SIGNATURE.</span></h1>
+          <p class="hero-sub">A sharper cut. A cleaner finish. A style that feels like you. Discover professional haircuts and grooming at Ali Hair Salon.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://wa.me/923278706969?text=Hello%20Ali%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">BOOK ON WHATSAPP <span>↗</span></a>
+            <a class="btn btn-outline" href="#services">EXPLORE SERVICES</a>
+          </div>
+          <div class="hero-note">✦ &nbsp; Style · Class · Confidence &nbsp; ✦</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What We Do</div>
+          <h2>THE ART OF <span class="gold">GROOMING</span></h2>
+          <p>From timeless classics to modern looks, every detail is finished with care.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-num">01 / CUT</div><h3>Premium Haircut</h3><p>Clean cuts, modern fades and styles shaped to suit you.</p></article>
+          <article class="service-card"><div class="service-num">02 / BEARD</div><h3>Beard Styling</h3><p>Sharp lines, balanced shaping and a polished finish.</p></article>
+          <article class="service-card"><div class="service-num">03 / STYLE</div><h3>Hair Styling</h3><p>Everyday texture or a refined look for a special occasion.</p></article>
+          <article class="service-card"><div class="service-num">04 / COLOR</div><h3>Hair Coloring</h3><p>Fresh tones and expressive colour, tailored to your style.</p></article>
+          <article class="service-card"><div class="service-num">05 / CARE</div><h3>Facial & Grooming</h3><p>A refreshed, well-groomed look with attention to detail.</p></article>
+          <article class="service-card"><div class="service-num">06 / EVENT</div><h3>Special Occasion</h3><p>Look your best for celebrations, events and big moments.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-photo">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1000&q=85" alt="Professional barber at work" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">The Salon · The Craft</div>
+          <h2>MEET <span class="gold">MR. ALI</span></h2>
+          <p>Welcome to Ali Hair Salon — a place where personal style meets professional grooming. Our focus is simple: understand the look you want, take care of the details and help you leave feeling confident.</p>
+          <p>Visit us on Kot Momin Road, Bhagtanwala, Sargodha. We look forward to welcoming you.</p>
+          <div class="signature">Mr. Ali</div>
+          <div class="eyebrow">Professional Hair Artist</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">The Lookbook</div>
+          <h2>STYLE <span class="gold">GALLERY</span></h2>
+          <p>A little inspiration for your next fresh look.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=85" alt="Modern men's haircut" loading="lazy"><span>Modern Classics</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=85" alt="Barbershop interior" loading="lazy"><span>The Barber Experience</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=85" alt="Barber styling hair" loading="lazy"><span>Precision & Detail</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="contact">
+      <div class="container visit-grid">
+        <div>
+          <div class="eyebrow">Find Your Way</div>
+          <h2>YOUR NEXT GREAT LOOK <span class="gold">STARTS HERE.</span></h2>
+          <p class="address">📍 Ali Hair Salon<br>Bhagtanwala, Kot Momin Road,<br>Sargodha, Punjab, Pakistan</p>
+          <p style="color:var(--muted)">Call / WhatsApp: <a class="gold" href="tel:+923278706969">0327-870-6969</a></p>
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=Ali%20Hair%20Salon%2C%20Bhagtanwala%2C%20Kot%20Momin%20Road%2C%20Sargodha%2C%20Pakistan" target="_blank" rel="noopener">GET DIRECTIONS ↗</a>
+          <a class="btn btn-outline" style="margin:8px 0 0 5px" href="https://wa.me/923278706969?text=Hello%2C%20I%20want%20to%20contact%20Ali%20Hair%20Salon." target="_blank" rel="noopener">CONTACT US</a>
+        </div>
+        <a class="map-card" href="https://www.google.com/maps/search/?api=1&query=Ali%20Hair%20Salon%2C%20Bhagtanwala%2C%20Kot%20Momin%20Road%2C%20Sargodha%2C%20Pakistan" target="_blank" rel="noopener">
+          <div><div class="map-pin"><i class="fa-solid fa-location-dot"></i></div><strong>Ali Hair Salon</strong><span style="color:var(--muted)">Bhagtanwala · Sargodha</span><p class="gold">OPEN LOCATION IN MAPS ↗</p></div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-brand">ALI HAIR SALON</div>
+      <div class="eyebrow">Mr. Ali · Professional Hair Artist</div>
+      <div class="socials" aria-label="Social media links">
+        <a href="https://www.facebook.com/ali.hairsalon.sargodha" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i>Facebook ↗</a>
+        <a href="https://www.instagram.com/ali.hairsalon.sargodha/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram ↗</a>
+        <a href="https://www.tiktok.com/@ali.hairsalon.sargodha" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i>TikTok ↗</a>
+        <a href="https://www.youtube.com/@AliHairSalonSargodha" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i>YouTube ↗</a>
+      </div>
+      <p>© <span id="year"></span> Ali Hair Salon. All rights reserved.</p>
+      <p class="disclaimer">Demo website. Social profile links and contact details should be verified before public promotion.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/923278706969?text=Hello%20Ali%20Hair%20Salon" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <nav class="bottom-nav" aria-label="Quick navigation">
+    <a href="#home" class="active"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="#services"><i class="fa-solid fa-scissors"></i>Services</a>
+    <a href="#gallery"><i class="fa-regular fa-images"></i>Gallery</a>
+    <a href="#about"><i class="fa-regular fa-user"></i>About</a>
+    <a href="#contact"><i class="fa-solid fa-location-dot"></i>Location</a>
+  </nav>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const navLinks = [...document.querySelectorAll(".bottom-nav a")];
+    const sections = navLinks.map(link => document.querySelector(link.getAttribute("href")));
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id));
+        }
+      });
+    }, { rootMargin: "-35% 0px -55% 0px" });
+    sections.forEach(section => section && observer.observe(section));
+  </script>
+</body>
+</html>
