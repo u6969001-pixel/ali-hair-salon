@@ -28,8 +28,24 @@
     header{position:absolute;z-index:5;top:0;left:0;width:100%;border-bottom:1px solid #ffffff17}
     .topbar{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand-mark{width:43px;height:43px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:1.45rem;transform:rotate(45deg)}
-    .brand-mark span{transform:rotate(-45deg)}
+    .brand-mark {
+    width: 43px;
+    height: 43px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+    overflow: hidden;
+}
+
+.brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transform: none;
+}
     .brand-name{font-family:Georgia,"Times New Roman",serif;font-size:1.05rem;letter-spacing:.13em;font-weight:700}
     .brand-name small{display:block;font:700 .58rem/1.4 Inter,Arial,sans-serif;letter-spacing:.25em;color:var(--gold)}
     .header-link{font-size:.8rem;color:var(--gold-light);letter-spacing:.1em;text-transform:uppercase}
